@@ -1,0 +1,47 @@
+Models
+  User
+   X username
+   X password_digest
+   X has many posts
+   X has secure password
+
+  Post
+   X title
+   X body
+   X belong to user
+
+Controllers
+   UsersController
+    X signup
+    X showing user posts
+
+  SessionsController
+    X login
+    X logout
+    X logged_in?
+    X current_user
+
+  PostsController
+    X Creating New Posts
+    X Displaying Individual Posts
+    Displaying Most Recent Posts?
+
+Routes
+  /signup
+  /login
+  /logout
+
+
+Anyone can see posts
+
+Only members can see author names
+
+Questions:
+  What do we do when someone isn't logged in?
+    Well, posts#show should probably just prompt them to log in
+
+
+Behavior:
+  'users/#{user_id}' should show that user's posts
+  'posts/' should show all recent posts
+    -> SQL queries?
