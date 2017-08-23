@@ -14,6 +14,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def show
+    @user = User.find_by(id: params[:id])
+    @posts = @user.posts.order("created_at").limit(10)
+  end
 
   private
     def user_params

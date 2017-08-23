@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
 
+  before_action :require_login, only: [:new, :create]
+
   def index
     @posts = Post.all.order("created_at").limit(25)
   end
@@ -10,6 +12,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+    @post.user = current_user
 
     if @post.save
       flash[:success] = "Post successful"
@@ -25,6 +28,13 @@ class PostsController < ApplicationController
 
   private
     def post_params
-      params.require(:post).permit(:title, body)
+      params.require(:post).permit(:title, :body)
+    end
+
+    def require_login
+      unless logged_in?
+        flash.now[:error] = "You must be logged in to create a new post"
+        render 'logins/new'
+      end
     end
 end

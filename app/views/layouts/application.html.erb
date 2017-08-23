@@ -9,6 +9,24 @@
   </head>
 
   <body>
+    <strong>C L U B H O U S E</strong>
+    <br>
+    <%= link_to "Home", root_path %>
+    <%= link_to "New Post", new_post_path %>
+    <% if logged_in? %>
+      <%= link_to "Sign Out", logout_path, method: :delete %><br>
+      Currently signed in as: <%= link_to current_user.username, current_user %>
+    <% else %>
+      <%= link_to "Join", signup_path %>
+      <%= link_to "Sign In", login_path %>
+    <% end %>
+
+    <% flash.each do |name, msg| %>
+      <br><%= msg %>
+    <% end %>
+
+    <br>
+
     <%= yield %>
 
 

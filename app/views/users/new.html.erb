@@ -1,3 +1,12 @@
+<% if @user.errors.any? %>
+  Please fix the following <%= pluralize(@user.errors.count, 'error') %>
+  <ul>
+    <% @user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
 <%= form_for @user, url: signup_path do |f| %>
   <%= f.label :username %>
   <%= f.text_field :username %><br>

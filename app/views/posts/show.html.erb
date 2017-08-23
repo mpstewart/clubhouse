@@ -1,3 +1,1 @@
-<h3><%= @post.title %></h3>
-<p><%= @post.body %></p>
-<p>Author: <%= logged_in? ? @post.user.username : "Log in to see post :-)" %></p>
+<%= render @post %>

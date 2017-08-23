@@ -9,6 +9,7 @@ class LoginsController < ApplicationController
 
     if @user && @user.authenticate(params[:login][:password])
       log_in @user
+
       redirect_to root_path
     else
       flash.now[:error] = "Invalid username or password"
@@ -19,6 +20,6 @@ class LoginsController < ApplicationController
 
   def destroy
     log_out
-    redirect_to rooth_path
-  end    
+    redirect_to root_path
+  end
 end
