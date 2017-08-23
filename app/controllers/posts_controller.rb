@@ -1,5 +1,4 @@
 class PostsController < ApplicationController
-
   before_action :require_login, only: [:new, :create]
 
   def index
@@ -33,6 +32,7 @@ class PostsController < ApplicationController
 
     def require_login
       unless logged_in?
+        set_return_to
         flash.now[:error] = "You must be logged in to create a new post"
         render 'logins/new'
       end
