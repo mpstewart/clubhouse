@@ -6,4 +6,12 @@ class User < ApplicationRecord
   validates :username, presence: true, 
                       uniqueness: { case_sensitive: false },
                       length: { maximum: 25 }
+
+  before_create :remember
+
+
+  private
+    def generate_remember_token
+      self.remember_token = Digest::SHA1.hexdigest(SecureRandom.urlsafe_base64)
+    end
 end
