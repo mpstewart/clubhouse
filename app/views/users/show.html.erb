@@ -1,6 +1,6 @@
-<h4><%= @user.username %></h4>
+<div class="username"><%= @user.username %></div>
 <% if @user.posts.any? %>
   <%= render @posts %>
 <% else %>
-  This user has no posts
+  <span class="no_posts">This user has no posts</span>
 <% end %>

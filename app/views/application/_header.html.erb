@@ -1,0 +1,15 @@
+<header>
+  <div id="logo">
+    <strong><%= link_to "C L U B H O U S E", root_path, id: "logo" %></strong>
+  </div>
+  <nav>
+    <%= link_to "New Post", new_post_path, class: "nav_btn" %>
+    <% if logged_in? %>
+      <%= link_to "Sign Out", logout_path, method: :delete, class: "nav_btn" %>
+      <%= link_to "Profile", current_user, class: "nav_btn" %>
+    <% else %>
+      <%= link_to "Join", signup_path, class: "nav_btn" %>
+      <%= link_to "Sign In", login_path, class: "nav_btn" %>
+    <% end %>
+  </nav>
+</header>

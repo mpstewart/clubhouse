@@ -1,0 +1,66 @@
+header {
+    background: black;
+    padding: 10px;
+    
+    #logo {
+        text-decoration: none;
+        font-size: 23px;
+        color: white;
+        padding: 2px;
+    }
+
+    nav {
+        .nav_btn {
+            text-decoration: none;
+            color: white;
+            margin: 3px;
+        }
+    }
+}
+
+div.post {
+    border: solid 1px black;
+    margin: 12px;
+
+    .post_title {
+        background: black;
+        padding: 4px;
+
+        a {
+            text-decoration: none;
+            background: black;
+            color: white;
+        }
+
+    }
+
+    .post_body {
+        margin: 8px;
+        margin-top: 2px;
+    }
+
+    .post_author {
+        margin: 3px;
+        font-size: 12px;
+        a {
+            color: black;
+        }
+    }
+}
+
+.alert {
+    color: white;
+    padding: 4px;
+    margin: 12px;
+    border-radius: 5px;
+}
+
+.alert-success {
+    background: green;
+    border: 1px solid darkgreen;
+}
+
+.alert-error {
+    background: darkred;
+    border: 1px red solid;
+}

@@ -1,10 +1,12 @@
-<br>
-<strong><%= link_to post.title, post %></strong><br>
-<%= post.body %><br>
-<% if logged_in? %>
-  <%= label_tag "Posted by: " %>
-  <%= link_to post.user.username, post.user %>
-<% else %>
-  Please <%= link_to "log in", login_path %> to view author
-<% end %>
-<br>
+<div class="post">
+  <div class="post_title"> <%= link_to post.title, post %> </div>
+  <div class="post_body"><%= post.body %></div>
+  <div class="post_author">
+    <% if logged_in? %>
+      <%= label_tag "Posted by: " %>
+      <%= link_to post.user.username, post.user %>
+    <% else %>
+      Please <%= link_to "log in", login_path %> to view author
+  <% end %>
+  </div>
+</div>

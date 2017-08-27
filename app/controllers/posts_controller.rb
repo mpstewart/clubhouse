@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_action :require_login, only: [:new, :create]
 
   def index
-    @posts = Post.all.order("created_at").limit(25)
+    @posts = Post.all.order("created_at" => :desc).limit(25)
   end
 
   def new
