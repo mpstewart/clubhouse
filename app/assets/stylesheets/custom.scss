@@ -1,66 +1,115 @@
 header {
-    background: black;
-    padding: 10px;
-    
-    #logo {
-        text-decoration: none;
-        font-size: 23px;
-        color: white;
-        padding: 2px;
-    }
+  background: black;
+  padding: 10px;
+  width: auto;
 
-    nav {
-        .nav_btn {
-            text-decoration: none;
-            color: white;
-            margin: 3px;
-        }
+  #logo {
+    text-decoration: none;
+    font-size: 23px;
+    color: white;
+    padding: 2px;
+  }
+
+  nav {
+    .nav_btn {
+      text-decoration: none;
+      color: white;
+      margin: 3px;
     }
+  }
 }
 
 div.post {
-    border: solid 1px black;
-    margin: 12px;
+  border: solid 1px black;
+  margin: 20px;
+  border-radius: 5px;
 
-    .post_title {
-        background: black;
-        padding: 4px;
+  .post_title {
+    background: black;
+    padding: 4px;
 
-        a {
-            text-decoration: none;
-            background: black;
-            color: white;
-        }
-
+    a {
+      text-decoration: none;
+      background: black;
+      color: white;
     }
+  }
 
-    .post_body {
-        margin: 8px;
-        margin-top: 2px;
-    }
+  .post_body {
+    padding: 8px;
+    padding-top: 2px;
+    background: white;
+  }
 
-    .post_author {
-        margin: 3px;
-        font-size: 12px;
-        a {
-            color: black;
-        }
+  .post_author {
+    padding: 3px;
+    font-size: 12px;
+    background: white;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    a {
+      color: black;
     }
+  }
+}
+
+body {
+  background: gray;
 }
 
 .alert {
-    color: white;
-    padding: 4px;
-    margin: 12px;
-    border-radius: 5px;
+  color: white;
+  padding: 4px;
+  margin: 12px;
+  border-radius: 5px;
 }
 
 .alert-success {
-    background: green;
-    border: 1px solid darkgreen;
+  background: green;
+  border: 1px solid darkgreen;
 }
 
 .alert-error {
-    background: darkred;
-    border: 1px red solid;
+  background: darkred;
+  border: 1px red solid;
+}
+
+footer {
+  position:fixed;
+  bottom:0px;
+  width: 100%;
+  margin: 0;
+  background-color: #000;
+  height: 25 px;/* or however high you would like */
+
+  .credits {
+    color: white;
+  }
+
+  a {
+    color: white;
+  }
+}
+
+form {
+  background: black;
+  color: white;
+  padding: 10px;
+  margin: 15px;
+  border-radius: 5px;
+  width: 200px;
+  
+  label, input {
+    margin: 7px;
+  }
+
+  textarea {
+    margin: 5px;
+    width: 500px;
+    height: 250px;
+  }
+}
+
+.new_post {
+  width: 515px;
 }

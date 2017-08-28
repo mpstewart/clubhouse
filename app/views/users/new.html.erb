@@ -9,14 +9,20 @@
 <% end %>
 
 <%= form_for @user, url: signup_path do |f| %>
-  <%= f.label :username %>
-  <%= f.text_field :username %><br>
+  <div class="form_field">
+  <%= f.label :username %><br>
+  <%= f.text_field :username %>
+  </div>
 
-  <%= f.label :password %>
-  <%= f.password_field :password%><br>
+  <div class="form_field">
+  <%= f.label :password %><br>
+  <%= f.password_field :password%>
+  </div>
 
-  <%= f.label :confirm %>
-  <%= f.password_field :password_confirmation %><br>
+  <div class="form_field">
+  <%= f.label :confirm %><br>
+  <%= f.password_field :password_confirmation %>
+  </div>
 
-  <%= f.submit %>
+  <%= f.submit "Join" %>
 <% end %>

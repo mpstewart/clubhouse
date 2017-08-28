@@ -1,12 +1,3 @@
-<% if @post.errors.any? %>
-  Please fix the following <%= pluralize(@post.errors.count, 'error') %>
-  <ul>
-    <% @post.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-  </ul>
-<% end %>
-
 <%= form_for @post do |f| %>
   <%= f.label "Title" %>
   <%= f.text_field :title %><br>
@@ -15,4 +6,15 @@
   <%= f.text_area :body %><br>
 
   <%= f.submit "Submit post" %>
+<% end %>
+
+<% if @post.errors.any? %>
+  <div class="alert alert-error">
+    Please fix the following <%= pluralize(@post.errors.count, 'error') %>
+    <ul>
+      <% @post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
 <% end %>
