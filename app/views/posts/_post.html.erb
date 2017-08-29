@@ -1,6 +1,6 @@
 <div class="post">
   <div class="post_title"> <%= link_to post.title, post %> </div>
-  <div class="post_body"><%= post.body %></div>
+  <div class="post_body"><%= simple_format post.body %></div>
   <div class="post_author">
     <% if logged_in? %>
       <%= label_tag "Posted by: " %>
