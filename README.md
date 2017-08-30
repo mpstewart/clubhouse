@@ -1,6 +1,9 @@
 # C L U B H O U S E
 
 ## Description
+
+View this app [here](http://mps-clubhouse.herokuapp.com/)
+
 Clubhouse is my implementation of the clubhouse project from The Odin Project. The goal of this project is to gain familiarity with user creation and authentication. This project was developed from scratch based on the following description:
 
 > In this project, you'll be building an exclusive clubhouse where your members can write embarrassing posts about non-members. Inside the clubhouse, members can see who the author of a post is but, outside, they can only see the story and wonder who wrote it.
